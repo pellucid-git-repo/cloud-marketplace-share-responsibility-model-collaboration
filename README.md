@@ -1,73 +1,56 @@
-# Welcome to your Lovable project
+The Cloud Marketplace Shared Responsibility Model (V1.0)
+🌐 View the Interactive Framework
+📌 Overview
+Cloud marketplaces have evolved from niche channels to critical enterprise procurement platforms, projected to reach $163B by 2030. However, the traditional "Shared Responsibility Model" for infrastructure (managing security of vs. in the cloud) does not address the complexity of marketplace transactions .
++1
 
-## Project info
+This project introduces a Three-Party Shared Responsibility Model to define accountability across Cloud Providers, Vendors, and Enterprise Customers .
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+🏗 The Three-Party Model
+Unlike infrastructure, marketplace procurement is a business-process-centric coordination challenge.
++1
 
-## How can I edit this code?
 
-There are several ways of editing your application.
+Cloud Provider (Platform Layer): Responsible for discovery, billing infrastructure, and platform security .
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+Third-Party Vendor (Product Layer): Responsible for software functionality, product security, and private offer creation .
 
-Changes made via Lovable will be committed automatically to this repo.
 
-**Use your preferred IDE**
+Customer Organization (Governance Layer): Responsible for the "Coordination Gap"—aligning 9+ internal teams, security assessments, and P2P integration .
++1
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+⚖️ Why This Repository Exists
+Enterprises are currently facing "Organizational Gridlock".
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-Follow these steps:
+The Problem: Manual coordination across 9+ teams results in 3–6 week transaction delays.
++1
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The Solution: A Marketplace Center of Excellence (MCoE) and automated coordination infrastructure .
 
-# Step 3: Install the necessary dependencies.
-npm i
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+The Goal: Move the industry from "Ad Hoc" manual processes to "Marketplace-Native" automation where pre-approved tools can be deployed in hours.
++1
 
-**Edit a file directly in GitHub**
+🤝 How to Contribute
+This is an Open Framework. We invite Enterprises, Vendors, and Cloud Providers to help refine these definitions as the ecosystem evolves .
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+Contribution Use Cases
+Add a Responsibility: If you are a Vendor and notice a missing "Product Layer" requirement, propose it via a Pull Request.
 
-**Use GitHub Codespaces**
+Refine a Workflow: If your organization has a faster "Target State" timeline, share your data to update our benchmarks.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
 
-## What technologies are used for this project?
+Governance Pillars: Help us expand the 6 MCoE pillars (Governance, Procurement, Finance, Security, Technology, Innovation) .
 
-This project is built with:
+Step-by-Step
+Fork the repository.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Navigate to /src/data/model_data.json to edit responsibilities or /docs for framework text.
 
-## How can I deploy this project?
+Submit a Pull Request with a brief explanation of your real-world experience.
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+📜 License
+This framework is shared under Creative Commons Attribution 4.0 International (CC BY 4.0). You are free to share and adapt this material for any purpose, including commercially, provided you give appropriate credit .
