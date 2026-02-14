@@ -1,116 +1,55 @@
 
 
-# Phase 2: The Coordination Gap and MCoE Framework
+# Phase 3: The Collaboration Layer
 
-## Narrative Purpose
-These two sections build the "before and after" story of the framework. The Coordination Gap shows the **problem** (manual gridlock costing weeks and dozens of person-hours), and the MCoE Pillars present the **solution** (a structured, cross-functional coordination function). Together they answer: "Now that I understand *who* owns what, *why* does it matter and *how* do I fix it?"
-
----
-
-## Section 1: The Coordination Gap — Timeline Comparison
-
-A high-contrast split-view showing the painful "before" against the streamlined "after."
-
-### Layout
-Two side-by-side cards within a `max-w-7xl` container (stacks vertically on mobile).
-
-### Left Card — "Current State: Ad Hoc Coordination" (Red/Danger Tint)
-- Red-tinted border and subtle red background (reusing existing `danger-muted` token)
-- A vertical **timeline** with numbered step indicators and connecting lines:
-  1. **Day 1** — Engineering discovers tool in marketplace
-  2. **Days 2-5** — Engineering requests access; Procurement asks for justification
-  3. **Days 6-10** — Finance questions budget allocation, no clear commitment mapping
-  4. **Days 11-20** — Security requests vendor InfoSec questionnaire, manual back-and-forth
-  5. **Days 21-25** — Legal reviews SCMP, requests amendments
-  6. **Days 26-30** — Procurement creates manual PO workaround
-  7. **Days 31-40** — IT provisions access, discovers integration issues
-  8. **Week 7+** — Tool finally deployed, engineers frustrated
-
-### Left Card — "Cost of Manual Coordination" Callout Box
-Below the timeline, a highlighted stat box showing the business impact:
-- **3-6 weeks** per transaction
-- **9 teams** involved, 2-5 hours each
-- **20-30 person-hours** per $10K purchase
-- Result: governance failures, shadow IT, lost engineering productivity
-
-### Right Card — "Target State: Marketplace-Native" (Green/Success Tint)
-- Green-tinted border and subtle green background (new `success` color token)
-- A compact **outcome list** with speed indicators:
-  - **Same-day (hours)** — Pre-approved vendor, under spending threshold
-  - **3-5 days** — Pre-approved vendor, over threshold, automated approval routing
-  - **1-2 weeks** — New vendor, standard risk profile, parallel security/legal reviews
-  - **2-4 weeks** — New vendor, high-risk, full assessment with visibility and automation
-- Each item has an icon and a brief explanation of what enables that speed (pre-approval, automated routing, parallel workflows, etc.)
-
-### Right Card — "What Makes This Possible" Callout Box
-Below the outcomes, a matching stat box highlighting the enablers:
-- Automated approval routing
-- Pre-approved vendor catalogs (Private Marketplace)
-- Parallel (not sequential) cross-functional reviews
-- Integrated P2P and financial tracking
+## Overview
+Transform the static landing page into a community-enabled portal by adding two new sections before the footer: a **9-Team Accountability Grid** showing every team involved in marketplace transactions, and a **"How to Contribute" section** with a prominent GitHub CTA card and clear contribution instructions.
 
 ---
 
-## Section 2: MCoE Pillars of Excellence — The Organizational Solution
+## Section 1: The 9-Team Accountability Grid
 
-### Section Header
-- Title: "The Marketplace Center of Excellence (MCoE)"
-- Subtitle explaining the MCoE as a cross-functional coordination function — not a new department, but a governance layer that connects existing teams.
+### Purpose
+Show exactly which teams are involved in a marketplace transaction and why coordination is the missing link. Each team is clickable to reveal their specific role.
 
 ### Layout
-A responsive **3x2 grid** of cards (stacks to 2x3 on tablet, 1x6 on mobile).
+A responsive grid of 9 interactive cards (3x3 on desktop, 2-col on tablet, 1-col on mobile).
 
-### The Six Pillar Cards
+### The 9 Teams
+Each card has a Lucide icon, team name, and a short role description that expands on click (using Collapsible or a simple toggle state):
 
-Each card has: a Lucide icon in a colored badge, pillar name, one-line description, and a bullet list of specific responsibilities.
+1. **Engineering** (Code icon) -- Discovers and evaluates tools; initiates procurement requests; owns technical integration
+2. **Procurement** (ShoppingCart icon) -- Executes purchase orders; manages vendor relationships; coordinates RFx processes
+3. **Finance** (Wallet icon) -- Allocates budgets; maps spend to cloud commitments (EDP/MACC); manages PO attribution
+4. **Security** (Shield icon) -- Conducts vendor risk assessments; validates compliance (SOC 2, ISO 27001); reviews data handling
+5. **Legal** (Scale icon) -- Reviews SCMP and contract terms; negotiates amendments; manages licensing compliance
+6. **Compliance** (ClipboardCheck icon) -- Monitors regulatory requirements; ensures audit readiness; tracks policy adherence
+7. **FinOps** (TrendingUp icon) -- Optimizes cloud spend; tracks commitment burn-down; provides cost visibility and recommendations
+8. **IT Ops** (Server icon) -- Provisions user access; configures IAM; manages P2P system integrations
+9. **Vendor Management** (Handshake icon) -- Manages vendor lifecycle; tracks SLAs and performance; coordinates renewals
 
-1. **Governance** (Shield icon)
-   - "Sets the rules, thresholds, and approval authority"
-   - Approval workflows and spending thresholds
-   - Commitment tracking (EDP/MACC alignment)
-   - Private Marketplace curation and policies
-   - Security baselines for vendor onboarding
-   - Compliance monitoring and audit readiness
+### Interaction
+Each card starts collapsed showing only the icon and team name. Clicking toggles an expanded view with the role description and 3-4 bullet points of specific responsibilities in a marketplace transaction.
 
-2. **Procurement** (ShoppingCart icon)
-   - "Executes purchases and manages vendor relationships"
-   - Purchase execution and order management
-   - Vendor relationship management
-   - Contract negotiations and renewals
-   - Pipeline management and demand forecasting
-   - RFx coordination for marketplace vendors
+---
 
-3. **Finance** (Wallet icon)
-   - "Tracks budgets, commitments, and cost attribution"
-   - Budget allocation and cloud commitment mapping
-   - PO attribution and requisition tracking
-   - Spend analytics and marketplace ROI reporting
-   - EDP/MACC burn-down monitoring
-   - Cost center and GL code alignment
+## Section 2: How to Contribute
 
-4. **Security** (Lock icon)
-   - "Validates vendor risk and compliance posture"
-   - Vendor security assessments (questionnaires, pen test reviews)
-   - Compliance validation (SOC 2, ISO 27001, GDPR, HIPAA, FedRAMP)
-   - Third-party risk scoring and continuous monitoring
-   - Data handling and privacy review
-   - Integration security requirements
+### Layout
+A full-width section with two parts:
 
-5. **Technology** (Cpu icon)
-   - "Configures platforms and integrates systems"
-   - IAM configuration and Private Marketplace setup
-   - P2P system integration (Coupa, SAP Ariba, Oracle, NetSuite)
-   - Technical enablement and team training
-   - Deployment support and access provisioning
-   - Tool evaluation and architecture review
+1. **Contribution Steps** -- A numbered 4-step visual walkthrough:
+   - Step 1: **Discover** -- Browse the framework and identify gaps
+   - Step 2: **Fork** -- Fork the GitHub repository to your account
+   - Step 3: **Edit** -- Update the responsibility data or MCoE pillars in the code
+   - Step 4: **Submit a PR** -- Open a Pull Request with your reasoning
 
-6. **Innovation** (Lightbulb icon)
-   - "Accelerates adoption and reduces procurement friction"
-   - Self-service access and guided buying experiences
-   - AI/ML adoption acceleration through marketplace
-   - Experimentation support (sandbox environments, PoC funding)
-   - Procurement friction reduction initiatives
-   - Competitive advantage through faster time-to-market
+2. **The CTA Card** -- A large, dark-themed "Contribution Card" with:
+   - Headline: "Help us define the standard."
+   - Body: "Fork the repo, add your workflow, and submit a Pull Request."
+   - CC BY 4.0 license badge
+   - A prominent "Contribute on GitHub" button (links to the repository)
+   - A secondary "View License" link to Creative Commons
 
 ---
 
@@ -118,38 +57,30 @@ Each card has: a Lucide icon in a colored badge, pillar name, one-line descripti
 
 ### New Files
 
-1. **`src/components/CoordinationGap.tsx`**
+1. **`src/components/TeamAccountabilityGrid.tsx`**
    - Self-contained section component
-   - Two-column grid layout (`lg:grid-cols-2`, stacks on mobile)
-   - Left card: vertical timeline with numbered step dots connected by a line, styled with `danger`/`danger-muted` tokens; stat callout box below
-   - Right card: outcome list with speed badges, styled with new `success`/`success-muted` tokens; enabler callout box below
-   - Uses existing `Card` component from shadcn/ui
+   - 9 team cards in a responsive 3x3 grid (`lg:grid-cols-3 md:grid-cols-2`)
+   - Each card uses React `useState` to toggle expanded/collapsed state on click
+   - Collapsed: icon + team name in a compact card
+   - Expanded: reveals role description and responsibility bullets
+   - Uses existing `Card` components and consistent styling (border-border/50, backdrop-blur)
 
-2. **`src/components/McoePillars.tsx`**
+2. **`src/components/HowToContribute.tsx`**
    - Self-contained section component
-   - 3x2 responsive grid (`lg:grid-cols-3 md:grid-cols-2`)
-   - Each pillar card uses the existing `Card`/`CardHeader`/`CardContent` components
-   - Icon badge matches the style used in `ResponsibilityCard` header (rounded-lg, accent background)
-   - Bullet list styled consistently with `ResponsibilityItem` (small text, muted foreground)
+   - Top half: 4-step contribution workflow displayed as a horizontal stepper (vertical on mobile) with numbered circles and connecting lines
+   - Bottom half: large CTA card with dark gradient background, GitHub button (`Github` Lucide icon), and CC BY 4.0 badge
+   - GitHub link will point to the repository URL (placeholder initially, easily updated once repo is connected)
 
 ### Modified Files
 
-3. **`src/index.css`**
-   - Add two new CSS custom properties under `:root`:
-     - `--success: 142 71% 45%` (green)
-     - `--success-muted: 142 50% 12%` (dark green background)
+3. **`src/pages/Index.tsx`**
+   - Import `TeamAccountabilityGrid` and `HowToContribute`
+   - Render them after `McoePillars` and before the footer
+   - Order: Matrix -> Coordination Gap -> MCoE Pillars -> Team Grid -> How to Contribute -> Footer
 
-4. **`tailwind.config.ts`**
-   - Add `success` color tokens to match `danger` pattern:
-     - `success.DEFAULT` and `success.muted`
-
-5. **`src/pages/Index.tsx`**
-   - Import `CoordinationGap` and `McoePillars`
-   - Render them between the Matrix section and the Footer
-   - Each section gets its own `id` for potential future anchor navigation
-
-### Visual Consistency
-- All new cards follow the same border/backdrop-blur styling as `ResponsibilityCard`
-- Section headings use the same `text-2xl font-bold sm:text-3xl` pattern
-- Container widths match existing sections (`max-w-7xl`)
-- Color tokens follow the established `danger`/`danger-muted` pattern for the new `success` pair
+### Design Consistency
+- All new cards follow the same `border-border/50 bg-card/80 backdrop-blur-sm` styling
+- Section headings use `text-2xl font-bold sm:text-3xl` with centered layout
+- Container widths use `max-w-7xl` to match existing sections
+- The CTA card uses a distinctive `bg-primary/10 border-primary/30` treatment to stand out
+- Team card expansion uses smooth height transitions for polish
