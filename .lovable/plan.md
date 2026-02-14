@@ -1,68 +1,155 @@
 
 
-# The Cloud Marketplace Shared Responsibility Model — Landing Page
+# Phase 2: The Coordination Gap and MCoE Framework
 
-## Overview
-A single-page, dark-mode cybersecurity-themed landing page presenting the Cloud Marketplace Shared Responsibility Model as an open framework. Uses Inter font, Lucide icons, and a polished professional aesthetic.
+## Narrative Purpose
+These two sections build the "before and after" story of the framework. The Coordination Gap shows the **problem** (manual gridlock costing weeks and dozens of person-hours), and the MCoE Pillars present the **solution** (a structured, cross-functional coordination function). Together they answer: "Now that I understand *who* owns what, *why* does it matter and *how* do I fix it?"
 
 ---
 
-## 1. Hero Section
-- Full-width dark hero with subtle gradient/grid background pattern
-- Title: **"The Cloud Marketplace Shared Responsibility Model: An Open Framework"**
-- Subtitle explaining the three-party responsibility gap in marketplace procurement
-- Version badge: "v1.0 — Open for Industry Contribution"
-- CTA button to scroll down to the matrix
+## Section 1: The Coordination Gap — Timeline Comparison
 
-## 2. Context Section — "Why This Model Exists"
-- Brief explanation that AWS's Shared Responsibility Model covers infrastructure (EC2, S3, RDS) but **does not** address Marketplace transactions
-- Highlight that marketplace transactions are three-party and business-process-centric
+A high-contrast split-view showing the painful "before" against the streamlined "after."
 
-## 3. The Three-Party Responsibility Matrix
-A responsive three-column grid (stacks on mobile), each column as a styled card:
+### Layout
+Two side-by-side cards within a `max-w-7xl` container (stacks vertically on mobile).
 
-### Column 1: Cloud Provider — Platform Layer
-*(Icon: Server or Cloud)*
-- **Discovery & Search** — Product catalog, search, vendor listings, pricing transparency
-- **Platform Security** — Infrastructure security, transaction data protection, fraud prevention
-- **Transaction Infrastructure** — Payment processing, billing aggregation, metering, invoicing
-- **Entitlement Management** — Grant/revoke access, subscriptions, license enforcement
-- **Governance Capabilities** — IAM framework, Private Marketplace, procurement APIs, policy tools
-- **Spend Visibility** — Cost & usage reports, marketplace analytics, billing API access
-- **Standard Contract Frameworks** — SCMP, standard licensing models, amendment mechanisms
-- 🔴 **Does Not Own** (red-tinted box): Customer procurement policy design, Vendor selection criteria, Contract negotiation outcomes, Customer security assessment execution, Customer approval workflows
+### Left Card — "Current State: Ad Hoc Coordination" (Red/Danger Tint)
+- Red-tinted border and subtle red background (reusing existing `danger-muted` token)
+- A vertical **timeline** with numbered step indicators and connecting lines:
+  1. **Day 1** — Engineering discovers tool in marketplace
+  2. **Days 2-5** — Engineering requests access; Procurement asks for justification
+  3. **Days 6-10** — Finance questions budget allocation, no clear commitment mapping
+  4. **Days 11-20** — Security requests vendor InfoSec questionnaire, manual back-and-forth
+  5. **Days 21-25** — Legal reviews SCMP, requests amendments
+  6. **Days 26-30** — Procurement creates manual PO workaround
+  7. **Days 31-40** — IT provisions access, discovers integration issues
+  8. **Week 7+** — Tool finally deployed, engineers frustrated
 
-### Column 2: Vendor — Product Layer
-*(Icon: Package or Code)*
-- **Product Security** — Application security, vulnerability management, data protection
-- **Software Functionality** — Features, performance, reliability, uptime
-- **Updates & Maintenance** — Patches, upgrades, bug fixes, deprecation management
-- **Licensing & Compliance** — License terms, usage rights, compliance attestations (SOC 2, FedRAMP, ISO 27001)
-- **Support & SLAs** — Customer support, service level commitments, escalation procedures
-- **Pricing & Commercial Terms** — Pricing models, discount structures, contract terms
-- **Private Offer Creation** — Custom offers, negotiated pricing, CPPO facilitation
-- 🔴 **Does Not Own** (red-tinted box): Customer procurement processes, Customer security review timelines, Customer approval workflows, Customer ERP/P2P integration, CSP platform infrastructure
+### Left Card — "Cost of Manual Coordination" Callout Box
+Below the timeline, a highlighted stat box showing the business impact:
+- **3-6 weeks** per transaction
+- **9 teams** involved, 2-5 hours each
+- **20-30 person-hours** per $10K purchase
+- Result: governance failures, shadow IT, lost engineering productivity
 
-### Column 3: Customer — Governance & Workflow Layer
-*(Icon: Shield or Building)*
-- **Procurement Strategy** — Marketplace vs. traditional channel, vendor selection, multi-marketplace approach
-- **Cross-Functional Process Design** — Define roles, workflows across procurement, finance, security, IT, legal
-- **Vendor Assessment** — Security review, compliance validation, third-party risk scoring
-- **Contract Management** — Commercial negotiation, legal review, amendment tracking, renewals
-- **Financial Management** — Budget allocation, PO management, spend attribution, commitment tracking
-- **Integration & Deployment** — P2P system connectivity, IAM configuration, user access provisioning
-- **Policy Definition** — Acceptable use policies, security baselines, spending thresholds, approval authority
-- 🔴 **Does Not Own** (red-tinted box): CSP platform infrastructure, Vendor product roadmaps or security architecture, CSP billing system design, Vendor SLA commitments
+### Right Card — "Target State: Marketplace-Native" (Green/Success Tint)
+- Green-tinted border and subtle green background (new `success` color token)
+- A compact **outcome list** with speed indicators:
+  - **Same-day (hours)** — Pre-approved vendor, under spending threshold
+  - **3-5 days** — Pre-approved vendor, over threshold, automated approval routing
+  - **1-2 weeks** — New vendor, standard risk profile, parallel security/legal reviews
+  - **2-4 weeks** — New vendor, high-risk, full assessment with visibility and automation
+- Each item has an icon and a brief explanation of what enables that speed (pre-approval, automated routing, parallel workflows, etc.)
 
-## 4. Footer
-- "Licensed under CC BY 4.0" with a link
-- "Enterprise Marketplace Shared Responsibility Model v1.0"
+### Right Card — "What Makes This Possible" Callout Box
+Below the outcomes, a matching stat box highlighting the enablers:
+- Automated approval routing
+- Pre-approved vendor catalogs (Private Marketplace)
+- Parallel (not sequential) cross-functional reviews
+- Integrated P2P and financial tracking
 
-## Design Details
-- **Dark mode** by default with deep navy/slate backgrounds
-- **Inter font** throughout
-- Cards with subtle borders and glow effects
-- Lucide icons for each responsibility area (Shield, DollarSign, Search, Server, Package, Lock, FileText, Users, etc.)
-- "Does Not Own" sections in a distinct red-tinted/bordered box at the bottom of each card
-- Smooth scroll and responsive layout (3 columns → 1 column on mobile)
+---
 
+## Section 2: MCoE Pillars of Excellence — The Organizational Solution
+
+### Section Header
+- Title: "The Marketplace Center of Excellence (MCoE)"
+- Subtitle explaining the MCoE as a cross-functional coordination function — not a new department, but a governance layer that connects existing teams.
+
+### Layout
+A responsive **3x2 grid** of cards (stacks to 2x3 on tablet, 1x6 on mobile).
+
+### The Six Pillar Cards
+
+Each card has: a Lucide icon in a colored badge, pillar name, one-line description, and a bullet list of specific responsibilities.
+
+1. **Governance** (Shield icon)
+   - "Sets the rules, thresholds, and approval authority"
+   - Approval workflows and spending thresholds
+   - Commitment tracking (EDP/MACC alignment)
+   - Private Marketplace curation and policies
+   - Security baselines for vendor onboarding
+   - Compliance monitoring and audit readiness
+
+2. **Procurement** (ShoppingCart icon)
+   - "Executes purchases and manages vendor relationships"
+   - Purchase execution and order management
+   - Vendor relationship management
+   - Contract negotiations and renewals
+   - Pipeline management and demand forecasting
+   - RFx coordination for marketplace vendors
+
+3. **Finance** (Wallet icon)
+   - "Tracks budgets, commitments, and cost attribution"
+   - Budget allocation and cloud commitment mapping
+   - PO attribution and requisition tracking
+   - Spend analytics and marketplace ROI reporting
+   - EDP/MACC burn-down monitoring
+   - Cost center and GL code alignment
+
+4. **Security** (Lock icon)
+   - "Validates vendor risk and compliance posture"
+   - Vendor security assessments (questionnaires, pen test reviews)
+   - Compliance validation (SOC 2, ISO 27001, GDPR, HIPAA, FedRAMP)
+   - Third-party risk scoring and continuous monitoring
+   - Data handling and privacy review
+   - Integration security requirements
+
+5. **Technology** (Cpu icon)
+   - "Configures platforms and integrates systems"
+   - IAM configuration and Private Marketplace setup
+   - P2P system integration (Coupa, SAP Ariba, Oracle, NetSuite)
+   - Technical enablement and team training
+   - Deployment support and access provisioning
+   - Tool evaluation and architecture review
+
+6. **Innovation** (Lightbulb icon)
+   - "Accelerates adoption and reduces procurement friction"
+   - Self-service access and guided buying experiences
+   - AI/ML adoption acceleration through marketplace
+   - Experimentation support (sandbox environments, PoC funding)
+   - Procurement friction reduction initiatives
+   - Competitive advantage through faster time-to-market
+
+---
+
+## Technical Implementation
+
+### New Files
+
+1. **`src/components/CoordinationGap.tsx`**
+   - Self-contained section component
+   - Two-column grid layout (`lg:grid-cols-2`, stacks on mobile)
+   - Left card: vertical timeline with numbered step dots connected by a line, styled with `danger`/`danger-muted` tokens; stat callout box below
+   - Right card: outcome list with speed badges, styled with new `success`/`success-muted` tokens; enabler callout box below
+   - Uses existing `Card` component from shadcn/ui
+
+2. **`src/components/McoePillars.tsx`**
+   - Self-contained section component
+   - 3x2 responsive grid (`lg:grid-cols-3 md:grid-cols-2`)
+   - Each pillar card uses the existing `Card`/`CardHeader`/`CardContent` components
+   - Icon badge matches the style used in `ResponsibilityCard` header (rounded-lg, accent background)
+   - Bullet list styled consistently with `ResponsibilityItem` (small text, muted foreground)
+
+### Modified Files
+
+3. **`src/index.css`**
+   - Add two new CSS custom properties under `:root`:
+     - `--success: 142 71% 45%` (green)
+     - `--success-muted: 142 50% 12%` (dark green background)
+
+4. **`tailwind.config.ts`**
+   - Add `success` color tokens to match `danger` pattern:
+     - `success.DEFAULT` and `success.muted`
+
+5. **`src/pages/Index.tsx`**
+   - Import `CoordinationGap` and `McoePillars`
+   - Render them between the Matrix section and the Footer
+   - Each section gets its own `id` for potential future anchor navigation
+
+### Visual Consistency
+- All new cards follow the same border/backdrop-blur styling as `ResponsibilityCard`
+- Section headings use the same `text-2xl font-bold sm:text-3xl` pattern
+- Container widths match existing sections (`max-w-7xl`)
+- Color tokens follow the established `danger`/`danger-muted` pattern for the new `success` pair
