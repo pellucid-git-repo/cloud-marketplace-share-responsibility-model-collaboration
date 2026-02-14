@@ -30,6 +30,8 @@ import {
 import ResponsibilityCard from "@/components/ResponsibilityCard";
 import CoordinationGap from "@/components/CoordinationGap";
 import McoePillars from "@/components/McoePillars";
+import TeamAccountabilityGrid from "@/components/TeamAccountabilityGrid";
+import HowToContribute from "@/components/HowToContribute";
 
 const cloudProviderResponsibilities = [
   { icon: Search, title: "Discovery & Search", description: "Product catalog, search, vendor listings, pricing transparency" },
@@ -157,6 +159,12 @@ const Index = () => {
 
       {/* MCoE Pillars */}
       <McoePillars />
+
+      {/* Team Accountability Grid */}
+      <TeamAccountabilityGrid />
+
+      {/* How to Contribute */}
+      <HowToContribute />
 
       {/* Footer */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
