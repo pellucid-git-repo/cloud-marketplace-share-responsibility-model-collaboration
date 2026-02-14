@@ -1,0 +1,66 @@
+{
+  "version": "1.0",
+  "lastUpdated": "2026-02-14",
+  "license": "CC BY 4.0",
+  "framework": {
+    "cloudProvider": {
+      "title": "Cloud Provider (Platform Layer)",
+      "description": "Owns the marketplace platform infrastructure and capabilities [cite: 84-85].",
+      "responsibilities": [
+        "Discovery & Search: Maintain product catalog and vendor listings [cite: 86, 306-307].",
+        "Platform Security: Secure infrastructure and prevent transaction fraud [cite: 87, 308-309].",
+        "Transaction Infrastructure: Process payments and billing aggregation [cite: 88, 310-311].",
+        "Entitlement Management: Grant/revoke access and manage subscriptions [cite: 89, 312-313].",
+        "Governance Capabilities: Provide IAM frameworks and private marketplace tools [cite: 90, 315-316].",
+        "Spend Visibility: Cost reports and usage analytics [cite: 91, 317-318].",
+        "Standard Contracts: Maintain SCMP and licensing models [cite: 92, 319-320]."
+      ],
+      "doesNotOwn": [
+        "Customer procurement policy design[cite: 93, 322].",
+        "Vendor selection criteria[cite: 93, 323].",
+        "Contract negotiation outcomes[cite: 93, 324].",
+        "Customer security assessment execution[cite: 93, 325].",
+        "Customer approval workflows[cite: 93, 326]."
+      ]
+    },
+    "vendor": {
+      "title": "Third-Party Vendor (Product Layer)",
+      "description": "Owns everything related to the product and commercial offers[cite: 95].",
+      "responsibilities": [
+        "Product Security: Application security and vulnerability management [cite: 97, 329-330].",
+        "Software Functionality: Features, performance, and uptime [cite: 97, 331-332].",
+        "Updates & Maintenance: Patches, upgrades, and bug fixes [cite: 97, 333-334].",
+        "Licensing & Compliance: Usage rights and compliance attestations (SOC2, etc.) [cite: 97, 335-336].",
+        "Support & SLAs: Customer support and service level commitments [cite: 97, 337-338].",
+        "Pricing & Commercial Terms: Set pricing models and discount structures [cite: 98, 339-340].",
+        "Private Offer Creation: Create custom offers and respond to amendments [cite: 99, 341-342]."
+      ],
+      "doesNotOwn": [
+        "Customer procurement processes[cite: 100, 344].",
+        "Customer security review timelines[cite: 100, 345].",
+        "Customer approval workflows[cite: 100, 346].",
+        "Customer ERP/P2P integration[cite: 347].",
+        "CSP platform infrastructure[cite: 348]."
+      ]
+    },
+    "customer": {
+      "title": "Customer Organization (Governance & Workflow Layer)",
+      "description": "Owns internal coordination and connecting marketplace to enterprise systems [cite: 102-103].",
+      "responsibilities": [
+        "Procurement Strategy: Channel decisions and vendor selection [cite: 105, 351-352].",
+        "Cross-Functional Alignment: Process definition across 9+ teams [cite: 106, 353-354].",
+        "Vendor Assessment: Security review and third-party risk scoring [cite: 107, 355-356].",
+        "Contract Management: Legal review and amendment tracking [cite: 107, 357-358].",
+        "Financial Management: Budget allocation and PO management [cite: 108, 359-360].",
+        "Integration & Deployment: P2P connectivity and user provisioning [cite: 109, 361-362].",
+        "Policy Definition: Security baselines and spending thresholds [cite: 111, 363-364]."
+      ],
+      "doesNotOwn": [
+        "CSP platform infrastructure[cite: 112, 366].",
+        "Vendor product roadmaps or security architecture[cite: 112, 367].",
+        "CSP billing system design[cite: 368].",
+        "Vendor SLA commitments[cite: 369]."
+      ]
+    }
+  }
+}
