@@ -54,6 +54,10 @@ export default {
           DEFAULT: "hsl(var(--danger))",
           muted: "hsl(var(--danger-muted))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          muted: "hsl(var(--success-muted))",
+        },
         "cyber-glow": "hsl(var(--cyber-glow))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
