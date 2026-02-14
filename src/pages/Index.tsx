@@ -27,64 +27,61 @@ import {
   Link,
   BookOpen,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 import ResponsibilityCard from "@/components/ResponsibilityCard";
+import responsibilitiesData from "@/data/data/responsibilities.json";
 import CoordinationGap from "@/components/CoordinationGap";
 import McoePillars from "@/components/McoePillars";
 import TeamAccountabilityGrid from "@/components/TeamAccountabilityGrid";
 import HowToContribute from "@/components/HowToContribute";
 
-const cloudProviderResponsibilities = [
-  { icon: Search, title: "Discovery & Search", description: "Product catalog, search, vendor listings, pricing transparency" },
-  { icon: Lock, title: "Platform Security", description: "Infrastructure security, transaction data protection, fraud prevention" },
-  { icon: CreditCard, title: "Transaction Infrastructure", description: "Payment processing, billing aggregation, metering, invoicing" },
-  { icon: Key, title: "Entitlement Management", description: "Grant/revoke access, subscriptions, license enforcement" },
-  { icon: Settings, title: "Governance Capabilities", description: "IAM framework, Private Marketplace, procurement APIs, policy tools" },
-  { icon: Eye, title: "Spend Visibility", description: "Cost & usage reports, marketplace analytics, billing API access" },
-  { icon: FileText, title: "Standard Contract Frameworks", description: "SCMP, standard licensing models, amendment mechanisms" },
-];
+// Map responsibility titles to their icons
+const iconMap: Record<string, LucideIcon> = {
+  "Discovery & Search": Search,
+  "Platform Security": Lock,
+  "Transaction Infrastructure": CreditCard,
+  "Entitlement Management": Key,
+  "Governance Capabilities": Settings,
+  "Spend Visibility": Eye,
+  "Standard Contracts": FileText,
+  "Product Security": ShieldCheck,
+  "Software Functionality": Cpu,
+  "Updates & Maintenance": RefreshCw,
+  "Licensing & Compliance": Award,
+  "Support & SLAs": Headphones,
+  "Pricing & Commercial Terms": DollarSign,
+  "Private Offer Creation": Gift,
+  "Procurement Strategy": ShoppingCart,
+  "Cross-Functional Alignment": Users,
+  "Vendor Assessment": ClipboardCheck,
+  "Contract Management": Briefcase,
+  "Financial Management": Wallet,
+  "Integration & Deployment": Link,
+  "Policy Definition": BookOpen,
+};
 
-const cloudProviderDoesNotOwn = [
-  "Customer procurement policy design",
-  "Vendor selection criteria",
-  "Contract negotiation outcomes",
-  "Customer security assessment execution",
-  "Customer approval workflows",
-];
+function parseResponsibilities(items: string[]) {
+  return items.map((item) => {
+    const cleaned = item.replace(/\s*\[cite:[^\]]*\]/g, "");
+    const colonIndex = cleaned.indexOf(":");
+    const title = colonIndex !== -1 ? cleaned.slice(0, colonIndex).trim() : cleaned;
+    const description = colonIndex !== -1 ? cleaned.slice(colonIndex + 1).trim().replace(/\.$/, "") : "";
+    return { icon: iconMap[title] || FileText, title, description };
+  });
+}
 
-const vendorResponsibilities = [
-  { icon: ShieldCheck, title: "Product Security", description: "Application security, vulnerability management, data protection" },
-  { icon: Cpu, title: "Software Functionality", description: "Features, performance, reliability, uptime" },
-  { icon: RefreshCw, title: "Updates & Maintenance", description: "Patches, upgrades, bug fixes, deprecation management" },
-  { icon: Award, title: "Licensing & Compliance", description: "License terms, usage rights, compliance attestations (SOC 2, FedRAMP, ISO 27001)" },
-  { icon: Headphones, title: "Support & SLAs", description: "Customer support, service level commitments, escalation procedures" },
-  { icon: DollarSign, title: "Pricing & Commercial Terms", description: "Pricing models, discount structures, contract terms" },
-  { icon: Gift, title: "Private Offer Creation", description: "Custom offers, negotiated pricing, CPPO facilitation" },
-];
+function parseDoesNotOwn(items: string[]) {
+  return items.map((item) => item.replace(/\s*\[cite:[^\]]*\]/g, "").replace(/\.$/, ""));
+}
 
-const vendorDoesNotOwn = [
-  "Customer procurement processes",
-  "Customer security review timelines",
-  "Customer approval workflows",
-  "Customer ERP/P2P integration",
-  "CSP platform infrastructure",
-];
+const { cloudProvider, vendor, customer } = responsibilitiesData.framework;
 
-const customerResponsibilities = [
-  { icon: ShoppingCart, title: "Procurement Strategy", description: "Marketplace vs. traditional channel, vendor selection, multi-marketplace approach" },
-  { icon: Users, title: "Cross-Functional Process Design", description: "Define roles, workflows across procurement, finance, security, IT, legal" },
-  { icon: ClipboardCheck, title: "Vendor Assessment", description: "Security review, compliance validation, third-party risk scoring" },
-  { icon: Briefcase, title: "Contract Management", description: "Commercial negotiation, legal review, amendment tracking, renewals" },
-  { icon: Wallet, title: "Financial Management", description: "Budget allocation, PO management, spend attribution, commitment tracking" },
-  { icon: Link, title: "Integration & Deployment", description: "P2P system connectivity, IAM configuration, user access provisioning" },
-  { icon: BookOpen, title: "Policy Definition", description: "Acceptable use policies, security baselines, spending thresholds, approval authority" },
-];
-
-const customerDoesNotOwn = [
-  "CSP platform infrastructure",
-  "Vendor product roadmaps or security architecture",
-  "CSP billing system design",
-  "Vendor SLA commitments",
-];
+const cloudProviderResponsibilities = parseResponsibilities(cloudProvider.responsibilities);
+const cloudProviderDoesNotOwn = parseDoesNotOwn(cloudProvider.doesNotOwn);
+const vendorResponsibilities = parseResponsibilities(vendor.responsibilities);
+const vendorDoesNotOwn = parseDoesNotOwn(vendor.doesNotOwn);
+const customerResponsibilities = parseResponsibilities(customer.responsibilities);
+const customerDoesNotOwn = parseDoesNotOwn(customer.doesNotOwn);
 
 const Index = () => {
   return (
