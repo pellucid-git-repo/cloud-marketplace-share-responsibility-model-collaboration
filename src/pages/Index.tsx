@@ -28,6 +28,8 @@ import {
   BookOpen,
 } from "lucide-react";
 import ResponsibilityCard from "@/components/ResponsibilityCard";
+import CoordinationGap from "@/components/CoordinationGap";
+import McoePillars from "@/components/McoePillars";
 
 const cloudProviderResponsibilities = [
   { icon: Search, title: "Discovery & Search", description: "Product catalog, search, vendor listings, pricing transparency" },
@@ -149,6 +151,12 @@ const Index = () => {
           />
         </div>
       </section>
+
+      {/* Coordination Gap */}
+      <CoordinationGap />
+
+      {/* MCoE Pillars */}
+      <McoePillars />
 
       {/* Footer */}
       <footer className="border-t border-border py-8 text-center text-sm text-muted-foreground">
