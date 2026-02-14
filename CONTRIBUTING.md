@@ -13,7 +13,7 @@ We are looking for contributions in the following areas:
 ## 🚀 The Contribution Process
 
 ### 1. Identify a Gap
-Browse the [Interactive Visual Model](https://YOUR-LOVABLE-PROJECT-URL.lovable.app). If you see a missing responsibility or a workflow that doesn't align with your real-world experience, you’ve found a contribution point!
+Browse the [Interactive Visual Model](https://cloud-trust-map.lovable.app). If you see a missing responsibility or a workflow that doesn't align with your real-world experience, you’ve found a contribution point!
 
 ### 2. Fork the Repository
 Click the **Fork** button at the top of this page to create your own copy of the repository.
