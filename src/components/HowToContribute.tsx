@@ -73,7 +73,7 @@ const HowToContribute = () => (
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-6">
         <Button size="lg" className="gap-2" asChild>
           <a
-            href="https://github.com"
+            href="https://github.com/pellucid-git-repo/cloud-marketplace-share-responsibility-model-collaboration"
             target="_blank"
             rel="noopener noreferrer"
           >
