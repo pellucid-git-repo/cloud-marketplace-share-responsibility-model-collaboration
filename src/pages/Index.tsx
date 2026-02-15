@@ -26,6 +26,7 @@ import {
   Wallet,
   Link,
   BookOpen,
+  Target,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import ResponsibilityCard from "@/components/ResponsibilityCard";
@@ -51,6 +52,7 @@ const iconMap: Record<string, LucideIcon> = {
   "Support & SLAs": Headphones,
   "Pricing & Commercial Terms": DollarSign,
   "Private Offer Creation": Gift,
+  "GTM & Channel Approach": Target,
   "Procurement Strategy": ShoppingCart,
   "Cross-Functional Alignment": Users,
   "Vendor Assessment": ClipboardCheck,
