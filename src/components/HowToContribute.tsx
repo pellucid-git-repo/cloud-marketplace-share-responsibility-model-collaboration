@@ -65,7 +65,7 @@ const HowToContribute = () => (
     {/* CTA Card */}
     <Card className="border-primary/30 bg-primary/10 backdrop-blur-sm p-8 sm:p-12 text-center">
       <h3 className="text-2xl font-bold text-foreground sm:text-3xl mb-3">
-        Help us define the standard.
+        Help us define the standard and make marketplaces Pellucid.
       </h3>
       <p className="text-muted-foreground max-w-xl mx-auto mb-6 leading-relaxed">
         Fork the repo, add your workflow, and submit a Pull Request. Every contribution strengthens the framework for the entire industry.
