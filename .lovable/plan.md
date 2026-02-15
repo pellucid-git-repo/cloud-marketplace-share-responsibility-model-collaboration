@@ -1,16 +1,34 @@
+# Add New Responsibilities to JSON Data
 
-# Remove the Coordination Gap Section
+## Changes
 
-## Change
-Remove the `<CoordinationGap />` component from the page and clean up its import. This removes the "Current State vs. Target State" timeline comparison (the manual 40-day procurement timeline and the automated outcomes cards).
+### 1. Vendor — New responsibility: "GTM & Channel Approach"
+
+Add a new entry to the vendor responsibilities array:
+
+```
+"GTM & Channel Approach: Selection and use of VARs/Distributors [cite: 97]."
+```
+
+### 2. Cloud Provider — Update "Transaction Infrastructure"
+
+Change the existing entry from:
+
+```
+"Transaction Infrastructure: Process payments and billing aggregation [cite: 88, 310-311]."
+```
+
+to:
+
+```
+"Transaction Infrastructure: Process payments, billing aggregation, and multi-party deal technology (e.g. CPPO, DSOR) [cite: 88, 310-311]."
+```
+
+## Technical Detail
+
+Both changes are in `src/data/data/responsibilities.json`. A new icon mapping for "GTM & Channel Approach" will be added to the `iconMap` in `src/pages/Index.tsx` (using the `Users` or `Megaphone` icon from lucide-react — likely `BarChart3` or `Target` to represent go-to-market strategy).
 
 ## Files to Modify
 
-1. **`src/pages/Index.tsx`**
-   - Remove the `import CoordinationGap` line
-   - Remove the `<CoordinationGap />` render call (line 155)
-
-2. **`src/components/CoordinationGap.tsx`**
-   - Delete this file entirely, as it will no longer be used
-
-The page order will become: Hero -> Why This Model Exists -> Responsibility Matrix -> MCoE Pillars -> Team Accountability Grid -> How to Contribute -> Footer.
+1. `**src/data/data/responsibilities.json**` — Add vendor responsibility, update cloud provider responsibility text
+2. `**src/pages/Index.tsx**` — Add icon mapping for "GTM & Channel Approach"
