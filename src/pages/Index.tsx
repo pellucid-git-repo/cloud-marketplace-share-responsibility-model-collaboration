@@ -116,7 +116,7 @@ const Index = () => {
       <section className="mx-auto max-w-4xl px-6 py-16">
         <h2 className="text-2xl font-bold text-foreground sm:text-3xl">Why This Model Exists</h2>
         <p className="mt-4 text-muted-foreground leading-relaxed">
-          Traditional shared responsibility models like AWS's cover infrastructure layers — compute, storage, networking. But <span className="text-foreground font-medium">cloud marketplace transactions are fundamentally different</span>: they're three-party, business-process-centric interactions spanning procurement, finance, security, and legal. This framework maps the responsibilities that fall between the cracks.
+          Traditional shared responsibility models like <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AWS's</a> cover infrastructure layers — compute, storage, networking. But <span className="text-foreground font-medium">cloud marketplace transactions are fundamentally different</span>: they're three-party, business-process-centric interactions spanning procurement, finance, security, and legal. This framework maps the responsibilities that fall between the cracks.
         </p>
       </section>
 
