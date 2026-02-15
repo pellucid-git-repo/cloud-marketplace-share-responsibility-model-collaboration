@@ -1,34 +1,19 @@
-# Add New Responsibilities to JSON Data
 
-## Changes
+# Add AWS Shared Responsibility Model Link
 
-### 1. Vendor — New responsibility: "GTM & Channel Approach"
+## Change
+Add a hyperlink to the [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) in the "Why This Model Exists" section, where the text already references "Traditional shared responsibility models like AWS's."
 
-Add a new entry to the vendor responsibilities array:
+This is a natural spot -- the phrase "AWS's" will become a clickable link, giving readers immediate context on the infrastructure-layer model this framework builds upon.
 
-```
-"GTM & Channel Approach: Selection and use of VARs/Distributors [cite: 97]."
-```
+## File to Modify
 
-### 2. Cloud Provider — Update "Transaction Infrastructure"
+**`src/pages/Index.tsx`** (line 119)
 
-Change the existing entry from:
+Change the text "Traditional shared responsibility models like AWS's" so that "AWS's" becomes a link:
 
 ```
-"Transaction Infrastructure: Process payments and billing aggregation [cite: 88, 310-311]."
+Traditional shared responsibility models like <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AWS's</a> cover infrastructure layers...
 ```
 
-to:
-
-```
-"Transaction Infrastructure: Process payments, billing aggregation, and multi-party deal technology (e.g. CPPO, DSOR) [cite: 88, 310-311]."
-```
-
-## Technical Detail
-
-Both changes are in `src/data/data/responsibilities.json`. A new icon mapping for "GTM & Channel Approach" will be added to the `iconMap` in `src/pages/Index.tsx` (using the `Users` or `Megaphone` icon from lucide-react — likely `BarChart3` or `Target` to represent go-to-market strategy).
-
-## Files to Modify
-
-1. `**src/data/data/responsibilities.json**` — Add vendor responsibility, update cloud provider responsibility text
-2. `**src/pages/Index.tsx**` — Add icon mapping for "GTM & Channel Approach"
+No new components or files needed -- just a single inline anchor tag.
