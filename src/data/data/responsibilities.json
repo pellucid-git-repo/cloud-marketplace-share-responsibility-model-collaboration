@@ -9,7 +9,7 @@
       "responsibilities": [
         "Discovery & Search: Maintain product catalog and vendor listings [cite: 86, 306-307].",
         "Platform Security: Secure infrastructure and prevent transaction fraud [cite: 87, 308-309].",
-        "Transaction Infrastructure: Process payments and billing aggregation [cite: 88, 310-311].",
+        "Transaction Infrastructure: Process payments, billing aggregation, and multi-party deal technology (e.g. CPPO, DSOR) [cite: 88, 310-311].",
         "Entitlement Management: Grant/revoke access and manage subscriptions [cite: 89, 312-313].",
         "Governance Capabilities: Provide IAM frameworks and private marketplace tools [cite: 90, 315-316].",
         "Spend Visibility: Cost reports and usage analytics [cite: 91, 317-318].",
@@ -33,7 +33,8 @@
         "Licensing & Compliance: Usage rights and compliance attestations (SOC2, etc.) [cite: 97, 335-336].",
         "Support & SLAs: Customer support and service level commitments [cite: 97, 337-338].",
         "Pricing & Commercial Terms: Set pricing models and discount structures [cite: 98, 339-340].",
-        "Private Offer Creation: Create custom offers and respond to amendments [cite: 99, 341-342]."
+        "Private Offer Creation: Create custom offers and respond to amendments [cite: 99, 341-342].",
+        "GTM & Channel Approach: Selection and use of VARs/Distributors [cite: 97]."
       ],
       "doesNotOwn": [
         "Customer procurement processes[cite: 100, 344].",
