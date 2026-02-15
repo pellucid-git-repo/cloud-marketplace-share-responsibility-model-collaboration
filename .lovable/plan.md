@@ -1,12 +1,16 @@
 
-
-# Update GitHub Repository Link
+# Remove the Coordination Gap Section
 
 ## Change
-Update the "Contribute on GitHub" button in `src/components/HowToContribute.tsx` to point to the actual repository URL instead of the placeholder `https://github.com`.
+Remove the `<CoordinationGap />` component from the page and clean up its import. This removes the "Current State vs. Target State" timeline comparison (the manual 40-day procurement timeline and the automated outcomes cards).
 
-## Technical Detail
-In `src/components/HowToContribute.tsx`, line 82, change the `href` from `"https://github.com"` to `"https://github.com/pellucid-git-repo/cloud-marketplace-share-responsibility-model-collaboration"`.
+## Files to Modify
 
-This is a single-line change in one file.
+1. **`src/pages/Index.tsx`**
+   - Remove the `import CoordinationGap` line
+   - Remove the `<CoordinationGap />` render call (line 155)
 
+2. **`src/components/CoordinationGap.tsx`**
+   - Delete this file entirely, as it will no longer be used
+
+The page order will become: Hero -> Why This Model Exists -> Responsibility Matrix -> MCoE Pillars -> Team Accountability Grid -> How to Contribute -> Footer.
