@@ -30,7 +30,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import ResponsibilityCard from "@/components/ResponsibilityCard";
 import responsibilitiesData from "@/data/data/responsibilities.json";
-import CoordinationGap from "@/components/CoordinationGap";
+
 import McoePillars from "@/components/McoePillars";
 import TeamAccountabilityGrid from "@/components/TeamAccountabilityGrid";
 import HowToContribute from "@/components/HowToContribute";
@@ -151,8 +151,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Coordination Gap */}
-      <CoordinationGap />
 
       {/* MCoE Pillars */}
       <McoePillars />
