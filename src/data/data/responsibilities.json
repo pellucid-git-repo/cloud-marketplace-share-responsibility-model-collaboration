@@ -20,7 +20,7 @@
         "Vendor selection criteria[cite: 93, 323].",
         "Contract negotiation outcomes[cite: 93, 324].",
         "Customer security assessment execution[cite: 93, 325].",
-        "Customer approval workflows[cite: 93, 326]."
+        
       ]
     },
     "vendor": {
@@ -37,11 +37,9 @@
         "GTM & Channel Approach: Selection and use of VARs/Distributors [cite: 97]."
       ],
       "doesNotOwn": [
-        "Customer procurement processes[cite: 100, 344].",
-        "Customer security review timelines[cite: 100, 345].",
-        "Customer approval workflows[cite: 100, 346].",
-        "Customer ERP/P2P integration[cite: 347].",
-        "CSP platform infrastructure[cite: 348]."
+        "Customer review processes[cite: 100, 344].",
+        "CSP platform infrastructure[cite: 348].",
+        "CSP billing infrastructure[cite: 348]."
       ]
     },
     "customer": {
@@ -49,7 +47,7 @@
       "description": "Owns internal coordination and connecting marketplace to enterprise systems [cite: 102-103].",
       "responsibilities": [
         "Procurement Strategy: Channel decisions and vendor selection [cite: 105, 351-352].",
-        "Cross-Functional Alignment: Process definition across 9+ teams [cite: 106, 353-354].",
+        "Cross-Functional Alignment: Process definition across teams [cite: 106, 353-354].",
         "Vendor Assessment: Security review and third-party risk scoring [cite: 107, 355-356].",
         "Contract Management: Legal review and amendment tracking [cite: 107, 357-358].",
         "Financial Management: Budget allocation and PO management [cite: 108, 359-360].",
