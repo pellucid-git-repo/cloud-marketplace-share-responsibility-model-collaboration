@@ -171,7 +171,7 @@ const TeamAccountabilityGrid = () => (
   <section className="mx-auto max-w-7xl px-6 py-20">
     <div className="text-center mb-12">
       <h2 className="text-2xl font-bold text-foreground sm:text-3xl">
-        The 9-Team Accountability Grid
+        The Team Accountability Grid
       </h2>
       <p className="mt-4 mx-auto max-w-2xl text-muted-foreground leading-relaxed">
         Every marketplace transaction touches these nine teams. Click any team to see their specific responsibilities — and why coordination is the missing link.
