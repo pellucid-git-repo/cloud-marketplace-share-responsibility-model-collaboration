@@ -1,37 +1,31 @@
 
 
-# Update Three-Party Responsibility Matrix Text
+# Adjust MCoE Pillars — Remove Pellucid-Specific Content
 
-Three edits to `src/data/data/responsibilities.json`:
+## Objective
+Make the MCoE section vendor-neutral by removing items that are too closely tied to specific Pellucid product capabilities (Private Marketplace references, specific P2P vendor names).
 
-## 1. Remove "Customer approval workflows" from Cloud Provider's "Does Not Own"
+## Changes in `src/components/McoePillars.tsx`
 
-Remove line 23 (`"Customer approval workflows[cite: 93, 326]."`) from the `cloudProvider.doesNotOwn` array. The remaining four items stay as-is.
+### Governance pillar (items array)
+- **Remove**: "Private Marketplace curation and policies"
 
-## 2. Remove "9+ teams" from Cross-Functional Alignment
+### Finance pillar (items array)
+- **Change**: "Spend analytics and marketplace ROI reporting" to "Spend analytics and ROI reporting"
 
-Change the Customer responsibility on line 52 from:
-```
-"Cross-Functional Alignment: Process definition across 9+ teams [cite: 106, 353-354]."
-```
-to:
-```
-"Cross-Functional Alignment: Process definition across teams [cite: 106, 353-354]."
-```
+### Technology pillar (items array)
+- **Change**: "IAM configuration and Private Marketplace setup" to "IAM configuration and access management"
+- **Change**: "P2P system integration (Coupa, SAP Ariba, Oracle, NetSuite)" to "ERP integration and procurement tooling"
 
-## 3. Consolidate Vendor "Does Not Own" items
+The last change also aligns with the project's preferred terminology of "ERP integration" over "P2P" references.
 
-Replace the four customer-facing items (procurement processes, security review timelines, approval workflows, ERP/P2P integration) with a single entry: `"Customer review processes"`. Keep `"CSP platform infrastructure"` and add `"CSP billing infrastructure"` as a separate item.
+## Summary
 
-Result:
-```json
-"doesNotOwn": [
-  "Customer review processes[cite: 100, 344].",
-  "CSP platform infrastructure[cite: 348].",
-  "CSP billing infrastructure[cite: 348]."
-]
-```
+| Pillar | Before | After |
+|--------|--------|-------|
+| Governance | 5 items | 4 items (removed Private Marketplace) |
+| Finance | unchanged count | Wording tweak (drop "marketplace") |
+| Technology | unchanged count | Two wording tweaks (drop Private Marketplace, drop vendor names) |
 
-## File Modified
-- `src/data/data/responsibilities.json` (all three changes)
+No structural or component changes needed — only string updates in the pillars data array.
 
