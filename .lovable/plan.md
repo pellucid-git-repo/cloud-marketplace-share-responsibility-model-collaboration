@@ -1,19 +1,37 @@
 
-# Add AWS Shared Responsibility Model Link
 
-## Change
-Add a hyperlink to the [AWS Shared Responsibility Model](https://aws.amazon.com/compliance/shared-responsibility-model/) in the "Why This Model Exists" section, where the text already references "Traditional shared responsibility models like AWS's."
+# Update Three-Party Responsibility Matrix Text
 
-This is a natural spot -- the phrase "AWS's" will become a clickable link, giving readers immediate context on the infrastructure-layer model this framework builds upon.
+Three edits to `src/data/data/responsibilities.json`:
 
-## File to Modify
+## 1. Remove "Customer approval workflows" from Cloud Provider's "Does Not Own"
 
-**`src/pages/Index.tsx`** (line 119)
+Remove line 23 (`"Customer approval workflows[cite: 93, 326]."`) from the `cloudProvider.doesNotOwn` array. The remaining four items stay as-is.
 
-Change the text "Traditional shared responsibility models like AWS's" so that "AWS's" becomes a link:
+## 2. Remove "9+ teams" from Cross-Functional Alignment
 
+Change the Customer responsibility on line 52 from:
 ```
-Traditional shared responsibility models like <a href="https://aws.amazon.com/compliance/shared-responsibility-model/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">AWS's</a> cover infrastructure layers...
+"Cross-Functional Alignment: Process definition across 9+ teams [cite: 106, 353-354]."
+```
+to:
+```
+"Cross-Functional Alignment: Process definition across teams [cite: 106, 353-354]."
 ```
 
-No new components or files needed -- just a single inline anchor tag.
+## 3. Consolidate Vendor "Does Not Own" items
+
+Replace the four customer-facing items (procurement processes, security review timelines, approval workflows, ERP/P2P integration) with a single entry: `"Customer review processes"`. Keep `"CSP platform infrastructure"` and add `"CSP billing infrastructure"` as a separate item.
+
+Result:
+```json
+"doesNotOwn": [
+  "Customer review processes[cite: 100, 344].",
+  "CSP platform infrastructure[cite: 348].",
+  "CSP billing infrastructure[cite: 348]."
+]
+```
+
+## File Modified
+- `src/data/data/responsibilities.json` (all three changes)
+
