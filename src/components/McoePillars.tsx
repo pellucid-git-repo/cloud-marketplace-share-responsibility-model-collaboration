@@ -24,7 +24,7 @@ const pillars: Pillar[] = [
     items: [
       "Approval workflows and spending thresholds",
       "Commitment tracking (EDP/MACC alignment)",
-      "Private Marketplace curation and policies",
+      
       "Security baselines for vendor onboarding",
       "Compliance monitoring and audit readiness",
     ],
@@ -48,7 +48,7 @@ const pillars: Pillar[] = [
     items: [
       "Budget allocation and cloud commitment mapping",
       "PO attribution and requisition tracking",
-      "Spend analytics and marketplace ROI reporting",
+      "Spend analytics and ROI reporting",
       "EDP/MACC burn-down monitoring",
       "Cost center and GL code alignment",
     ],
@@ -70,8 +70,8 @@ const pillars: Pillar[] = [
     title: "Technology",
     tagline: "Configures platforms and integrates systems",
     items: [
-      "IAM configuration and Private Marketplace setup",
-      "P2P system integration (Coupa, SAP Ariba, Oracle, NetSuite)",
+      "IAM configuration and access management",
+      "ERP integration and procurement tooling",
       "Technical enablement and team training",
       "Deployment support and access provisioning",
       "Tool evaluation and architecture review",
