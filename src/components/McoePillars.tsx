@@ -71,7 +71,7 @@ const pillars: Pillar[] = [
     tagline: "Configures platforms and integrates systems",
     items: [
       "IAM configuration and access management",
-      "ERP integration and procurement tooling",
+      "Systems and application integrations",
       "Technical enablement and team training",
       "Deployment support and access provisioning",
       "Tool evaluation and architecture review",
