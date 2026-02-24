@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   ArrowDown,
   Cloud,
+  Heart,
   Package,
   Shield,
   Search,
@@ -91,6 +92,13 @@ const Index = () => {
       {/* Hero */}
       <header className="relative grid-bg overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-primary/5 via-transparent to-background" />
+        <div className="absolute top-4 right-6 z-10">
+          <Button variant="outline" size="sm" className="gap-2" asChild>
+            <a href="#donate">
+              <Heart className="h-4 w-4" /> Donate
+            </a>
+          </Button>
+        </div>
         <div className="relative mx-auto max-w-5xl px-6 py-24 text-center lg:py-36">
           <Badge variant="outline" className="mb-6 border-primary/40 text-primary">
             v1.0 — Open for Industry Contribution
@@ -176,6 +184,18 @@ const Index = () => {
           >
             CC BY 4.0
           </a>
+        </p>
+        <p className="mt-2">
+          marketplace-responsibility.org is maintained by Pellucid Network, Inc. Visit{" "}
+          <a
+            href="https://pellucidnetwork.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-primary hover:underline"
+          >
+            Pellucid Network
+          </a>{" "}
+          to learn more.
         </p>
       </footer>
     </div>
