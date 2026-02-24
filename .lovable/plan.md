@@ -1,31 +1,21 @@
 
 
-# Adjust MCoE Pillars — Remove Pellucid-Specific Content
+# Add Pellucid Attribution and Donate Button
 
-## Objective
-Make the MCoE section vendor-neutral by removing items that are too closely tied to specific Pellucid product capabilities (Private Marketplace references, specific P2P vendor names).
+## 1. Footer Attribution
+Add a line to the existing footer in `src/pages/Index.tsx` stating:
+> "marketplace-responsibility.org is maintained by Pellucid Network, Inc. Visit [Pellucid Network](https://pellucidnetwork.com) to learn more."
 
-## Changes in `src/components/McoePillars.tsx`
+This goes after the existing CC BY 4.0 license line.
 
-### Governance pillar (items array)
-- **Remove**: "Private Marketplace curation and policies"
+## 2. Donate Button
+Add a "Donate" button to the top-right of the hero/header area in `src/pages/Index.tsx`. It will be styled as an outline button with a Heart icon, positioned fixed or absolute in the top-right corner of the header. For now it will link to `#donate` as a placeholder (or we can discuss a real URL).
 
-### Finance pillar (items array)
-- **Change**: "Spend analytics and marketplace ROI reporting" to "Spend analytics and ROI reporting"
+## Technical Details
 
-### Technology pillar (items array)
-- **Change**: "IAM configuration and Private Marketplace setup" to "IAM configuration and access management"
-- **Change**: "P2P system integration (Coupa, SAP Ariba, Oracle, NetSuite)" to "ERP integration and procurement tooling"
+**File: `src/pages/Index.tsx`**
 
-The last change also aligns with the project's preferred terminology of "ERP integration" over "P2P" references.
-
-## Summary
-
-| Pillar | Before | After |
-|--------|--------|-------|
-| Governance | 5 items | 4 items (removed Private Marketplace) |
-| Finance | unchanged count | Wording tweak (drop "marketplace") |
-| Technology | unchanged count | Two wording tweaks (drop Private Marketplace, drop vendor names) |
-
-No structural or component changes needed — only string updates in the pillars data array.
+- Import the `Heart` icon from lucide-react
+- Add a sticky/fixed top nav bar with the Donate button (top-right), or place it absolutely in the header section
+- Add the Pellucid attribution paragraph to the footer between the license line and the closing `</footer>` tag
 
